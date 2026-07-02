@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spartan Nation | Fight Instruction • Mockup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --accent-red: #b91c1c;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        .spartan-red {
+            color: #b91c1c;
+        }
+
+        .section-dark {
+            background-color: #0a0a0a;
+        }
+
+        .nav-dark {
+            background-color: #111111;
+            border-bottom: 1px solid #1f1f1f;
+        }
+
+        .video-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .tab-button {
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        .tab-button.active {
+            color: white;
+            border-bottom: 3px solid #b91c1c;
+        }
+
+        .tab-button:not(.active):hover {
+            color: #d1d5db;
+        }
+
+        .mockup-note {
+            background: linear-gradient(to right, #1f1f1f, #111111);
+            border: 1px solid #374151;
+        }
+
+        .fight-badge {
+            background-color: #b91c1c;
+            color: white;
+            font-size: 0.65rem;
+            padding: 1px 8px;
+            border-radius: 9999px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .thumbnail-overlay {
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #b91c1c;
+        }
+
+        .series-header {
+            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+        }
+
+        .modal {
+            animation: modalPop 0.2s ease-out forwards;
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .metric {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <!-- Top Mockup Banner -->
+    <div class="bg-zinc-900 border-b border-zinc-800 py-2 text-center text-xs">
+        <div class="max-w-screen-xl mx-auto px-4 flex items-center justify-center gap-x-3 text-zinc-400">
+            <i class="fa-solid fa-flask text-amber-500"></i>
+            <span class="font-medium">HIGH-FIDELITY VISUAL MOCKUP</span> 
+            <span class="hidden sm:inline">— All buttons are simulated. Payments &amp; real video content to be connected later.</span>
+            <span class="px-2 py-0.5 bg-zinc-800 text-[10px] rounded font-mono">v1.0</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="nav-dark sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="flex items-center justify-center w-11 h-11 bg-zinc-900 border border-zinc-700 rounded-xl">
+                        <i class="fa-solid fa-shield-halved text-[#b91c1c] text-3xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-2xl tracking-tighter heading-font">SPARTAN NATION</div>
+                        <div class="text-[10px] text-zinc-500 -mt-1 tracking-[2px]">INSTRUCTION</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#series" class="nav-link text-zinc-300 hover:text-white">Series</a>
+                    <a href="#expert" class="nav-link text-zinc-300 hover:text-white">The Coach</a>
+                    <a href="#testimonials" class="nav-link text-zinc-300 hover:text-white">Results</a>
+                    <a href="#faq" class="nav-link text-zinc-300 hover:text-white">FAQ</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <a href="https://spartannationcombatives.com/" target="_blank" 
+                       class="hidden sm:flex items-center gap-x-2 px-4 py-2 text-sm font-medium border border-zinc-700 hover:bg-zinc-900 rounded-2xl transition-colors">
+                        <span>Visit the Gym</span>
+                        <i class="fa-solid fa-external-link-alt text-xs"></i>
+                    </a>
+                    
+                    <button onclick="document.getElementById('series').scrollIntoView({ behavior: 'smooth' })" 
+                            class="px-6 py-2.5 bg-white text-zinc-900 hover:bg-zinc-100 font-semibold text-sm rounded-2xl transition-all active:scale-[0.985]">
+                        Browse Series
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-[620px] md:h-[680px] flex items-center overflow-hidden bg-zinc-950">
+        <!-- Hero Background (self-contained CSS version) -->
+        <div class="absolute inset-0 bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:4px_4px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-black/80"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-30">
+            <div class="text-[180px] font-black text-white/10 tracking-[-12px] select-none">SPARTAN</div>
+        </div>
+
+        <div class="relative max-w-screen-xl mx-auto px-6 pt-12">
+            <div class="max-w-3xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-6">
+                    <div class="w-2 h-2 bg-[#b91c1c] rounded-full animate-pulse"></div>
+                    <span class="text-xs font-semibold tracking-widest">AFFILIATED WITH SPARTAN NATION COMBATIVES • MESA, AZ</span>
+                </div>
+
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tighter heading-font leading-[1.05] mb-6">
+                    TECHNIQUES THAT<br>WIN FIGHTS.<br>
+                    <span class="text-[#b91c1c]">TAUGHT BY THOSE</span><br>
+                    WHO WIN THEM.
+                </h1>
+                
+                <p class="max-w-lg text-xl text-zinc-300 mb-8">
+                    Battle-tested submission wrestling and fighting systems from a multi-time title holder. 
+                    Structured. Focused. No fluff. The same methods used to secure real victories — now available to you.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="document.getElementById('series').scrollIntoView({ behavior: 'smooth' })" 
+                            class="group inline-flex items-center justify-center gap-x-3 px-9 py-4 bg-[#b91c1c] hover:bg-red-700 text-white font-semibold text-lg rounded-3xl transition-all active:scale-[0.985]">
+                        <span>Browse the Series</span>
+                        <i class="fa-solid fa-arrow-right group-active:translate-x-1 transition"></i>
+                    </button>
+                    
+                    <button onclick="showPreviewModal()" 
+                            class="inline-flex items-center justify-center gap-x-3 px-8 py-4 border border-white/30 hover:bg-white/5 font-medium rounded-3xl transition-all text-lg">
+                        <i class="fa-solid fa-play mr-1"></i>
+                        <span>Watch Free Teaser (2 min)</span>
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-x-6 mt-8 text-sm">
+                    <div class="flex -space-x-2">
+                        <div class="w-7 h-7 bg-zinc-700 border border-zinc-600 rounded-full overflow-hidden"><img src="https://i.pravatar.cc/28?img=12" class="w-full h-full object-cover"></div>
+                        <div class="w-7 h-7 bg-zinc-700 border border-zinc-600 rounded-full overflow-hidden"><img src="https://i.pravatar.cc/28?img=28" class="w-full h-full object-cover"></div>
+                        <div class="w-7 h-7 bg-zinc-700 border border-zinc-600 rounded-full overflow-hidden"><img src="https://i.pravatar.cc/28?img=47" class="w-full h-full object-cover"></div>
+                    </div>
+                    <div class="text-zinc-400 text-sm">
+                        <span class="font-semibold text-white">2,847+</span> students learning right now
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust bar at bottom of hero -->
+        <div class="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-lg border-t border-white/10 py-3.5">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs md:text-sm text-zinc-400">
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-emerald-400"></i> <span>Proven in real title fights</span></div>
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-emerald-400"></i> <span>Structured progressive curriculum</span></div>
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-emerald-400"></i> <span>Lifetime access • No subscriptions</span></div>
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-emerald-400"></i> <span>99¢ per video or $9.99 full series</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why This Over Free YouTube -->
+    <div class="max-w-screen-xl mx-auto px-6 py-12 border-b border-zinc-800">
+        <div class="grid md:grid-cols-12 gap-x-8 items-center">
+            <div class="md:col-span-5 mb-8 md:mb-0">
+                <div class="uppercase tracking-[1.5px] text-xs font-semibold text-[#b91c1c] mb-3">THE DIFFERENCE</div>
+                <h2 class="text-4xl font-bold tracking-tight heading-font">Why pay when<br>YouTube is free?</h2>
+            </div>
+            <div class="md:col-span-7">
+                <div class="grid sm:grid-cols-2 gap-5 text-[15px]">
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-bullseye text-[#b91c1c] text-xl w-6"></i></div>
+                        <div>
+                            <div class="font-semibold mb-1">Battle-tested, not theory</div>
+                            <div class="text-zinc-400">These are the exact entries, chains, and finishes our coach used to win titles — not generic demos.</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-layer-group text-[#b91c1c] text-xl w-6"></i></div>
+                        <div>
+                            <div class="font-semibold mb-1">Structured progression</div>
+                            <div class="text-zinc-400">Learn in the right order. No jumping between random 45-minute videos trying to piece it together.</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-clock text-[#b91c1c] text-xl w-6"></i></div>
+                        <div>
+                            <div class="font-semibold mb-1">High-signal, zero fluff</div>
+                            <div class="text-zinc-400">Focused 8–15 minute videos that respect your time. Every rep has a purpose.</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-users text-[#b91c1c] text-xl w-6"></i></div>
+                        <div>
+                            <div class="font-semibold mb-1">Real gym credibility</div>
+                            <div class="text-zinc-400">Directly from the mats at Spartan Nation Combatives — where fighters actually train and compete.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About the Expert -->
+    <div id="expert" class="max-w-screen-xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-12 gap-x-10 items-center">
+            <div class="md:col-span-5 mb-10 md:mb-0">
+                <div class="sticky top-24">
+                    <div class="inline-block px-4 py-1 bg-zinc-900 border border-zinc-700 rounded-full text-xs font-medium tracking-wider mb-4">THE EXPERT BEHIND THE SYSTEM</div>
+                    
+                    <h2 class="text-5xl font-bold tracking-tighter heading-font leading-none mb-6">Coach Dan Huber</h2>
+                    
+                    <div class="space-y-1 text-lg">
+                        <div class="font-semibold">Multi-time MMA &amp; Submission Wrestling Title Holder</div>
+                        <div class="text-zinc-400">Head Submission Coach • Spartan Nation Combatives</div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <div class="fight-badge flex items-center gap-x-1.5 px-3 py-1"><i class="fa-solid fa-trophy text-xs"></i> <span>3x Title Champion</span></div>
+                        <div class="px-3 py-1 bg-zinc-900 border border-zinc-700 rounded-full text-xs font-medium">ADCC Regional Medalist</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-7">
+                <div class="prose prose-invert max-w-none text-[15.5px] text-zinc-300">
+                    <p class="mb-5">Dan has spent over a decade competing at the highest levels of MMA and submission grappling. The systems in these series are not theoretical — they are the exact techniques, entries, and finishing sequences he has refined through hundreds of competitive matches and used to win titles.</p>
+                    
+                    <p class="mb-5">"I don't teach what looks good on camera. I teach what actually finishes fights and survives against elite competition. Everything here has been pressure-tested in the cage and on the competition mats at Spartan Nation."</p>
+                    
+                    <div class="bg-zinc-900 border border-zinc-800 p-5 rounded-3xl mt-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-quote-left text-4xl text-[#b91c1c] mt-1 opacity-75"></i>
+                            <div>
+                                <div class="italic">"The leg lock chain I used to win my last title is broken down in detail in the Leg Locks series. Same entries. Same setups. Same finishes. Students who have trained it are now hitting it in their own competitions."</div>
+                                <div class="text-xs text-zinc-400 mt-3 font-medium">— Coach Dan Huber, after his most recent title win</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Series Section -->
+    <div id="series" class="bg-zinc-900 border-y border-zinc-800 py-12">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                <div>
+                    <div class="uppercase text-xs tracking-[2px] font-semibold text-[#b91c1c]">CHOOSE YOUR FOCUS</div>
+                    <h2 class="text-5xl font-bold tracking-tighter heading-font">The Series</h2>
+                </div>
+                <div class="mt-3 md:mt-0 text-sm text-zinc-400 max-w-xs">
+                    Pick a topic. Master it. Or grab the full series for maximum value.
+                </div>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap gap-2 mb-8 border-b border-zinc-800 pb-1" id="tab-nav">
+                <button onclick="switchTab('leglocks')" class="tab-button active px-6 py-3 text-sm font-semibold border-b-2 border-[#b91c1c] text-white" data-tab="leglocks">
+                    Leg Locks
+                </button>
+                <button onclick="switchTab('armbars')" class="tab-button px-6 py-3 text-sm font-semibold text-zinc-400 hover:text-zinc-200" data-tab="armbars">
+                    Armbars &amp; Joint Locks
+                </button>
+                <button onclick="switchTab('chokes')" class="tab-button px-6 py-3 text-sm font-semibold text-zinc-400 hover:text-zinc-200" data-tab="chokes">
+                    Chokes &amp; Strangles
+                </button>
+                <button onclick="switchTab('womens')" class="tab-button px-6 py-3 text-sm font-semibold text-zinc-400 hover:text-zinc-200" data-tab="womens">
+                    Women's Self-Defense
+                </button>
+                <button onclick="switchTab('ground')" class="tab-button px-6 py-3 text-sm font-semibold text-zinc-400 hover:text-zinc-200" data-tab="ground">
+                    Ground Escapes
+                </button>
+                <button onclick="switchTab('takedowns')" class="tab-button px-6 py-3 text-sm font-semibold text-zinc-400 hover:text-zinc-200" data-tab="takedowns">
+                    Takedowns &amp; Throws
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            
+            <!-- LEG LOCKS -->
+            <div id="content-leglocks" class="tab-content">
+                <div class="series-header rounded-3xl p-8 mb-8">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-y-6">
+                        <div class="max-w-2xl">
+                            <div class="flex items-center gap-x-3 mb-3">
+                                <span class="fight-badge">USED IN TITLE WIN</span>
+                            </div>
+                            <h3 class="text-4xl font-bold tracking-tight">Leg Locks</h3>
+                            <p class="mt-3 text-lg text-zinc-300">Master entries, finishes, and defenses from every major position. Includes the exact sequences Coach Huber used to secure multiple title victories.</p>
+                            <div class="mt-4 flex items-center gap-x-4 text-sm">
+                                <div><span class="font-semibold">8 videos</span> • 94 minutes total</div>
+                                <div class="text-emerald-400 flex items-center gap-x-1"><i class="fa-solid fa-check"></i> <span class="font-medium">Lifetime access</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0">
+                            <button onclick="buyFullSeries('Leg Locks', 9.99)" 
+                                    class="w-full lg:w-auto px-10 py-4 bg-white text-zinc-900 hover:bg-zinc-100 font-bold text-lg rounded-3xl flex items-center justify-center gap-x-3 transition-all active:scale-[0.985]">
+                                <span>Buy Full Series</span>
+                                <span class="font-mono text-xl">$9.99</span>
+                            </button>
+                            <div class="text-center text-xs text-zinc-500 mt-2">Save over 85% vs individual</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                    <!-- Video Cards for Leg Locks -->
+                    <div class="video-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                        <div class="relative aspect-video bg-zinc-950 flex items-center justify-center bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:4px_4px]">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center px-4">
+                                    <div class="font-bold text-2xl tracking-tighter">LEG LOCK<br>ENTRIES</div>
+                                    <div class="text-xs text-emerald-400 mt-1 font-medium">TITLE SEQUENCE</div>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-11 h-11 bg-black/70 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition z-10">
+                                    <i class="fa-solid fa-play text-white ml-0.5"></i>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 right-3 bg-black/80 text-[10px] font-mono px-1.5 py-px rounded z-10">14:22</div>
+                        </div>
+                        <div class="p-5">
+                            <div class="font-semibold leading-tight mb-1.5">The Title-Winning Leg Lock Chain</div>
+                            <div class="text-xs text-zinc-400 mb-3 line-clamp-2">The exact entry + finish sequence Coach used in his most recent title win. Step-by-step breakdown.</div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-semibold">$0.99</div>
+                                <button onclick="buyVideo('The Title-Winning Leg Lock Chain', 0.99)" 
+                                        class="px-5 py-1.5 text-xs font-semibold bg-zinc-800 hover:bg-[#b91c1c] hover:text-white rounded-2xl transition">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                        <div class="relative aspect-video bg-zinc-950 flex items-center justify-center">
+                            <div class="w-full h-full bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:4px_4px]"></div>
+                            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                                <div>
+                                    <div class="font-bold text-xl tracking-tight">LEG LOCK ENTRIES<br>FROM CLOSED GUARD</div>
+                                    <div class="text-emerald-400 text-xs mt-1 font-medium">MOST POPULAR</div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 right-3 bg-black/80 text-[10px] font-mono px-1.5 py-px rounded">11:48</div>
+                        </div>
+                        <div class="p-5">
+                            <div class="font-semibold leading-tight mb-1.5">Leg Lock Entries from Closed Guard</div>
+                            <div class="text-xs text-zinc-400 mb-3 line-clamp-2">High-percentage entries that work against strong passers. Grips, angles, and timing details.</div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-semibold">$0.99</div>
+                                <button onclick="buyVideo('Leg Lock Entries from Closed Guard', 0.99)" 
+                                        class="px-5 py-1.5 text-xs font-semibold bg-zinc-800 hover:bg-[#b91c1c] hover:text-white rounded-2xl transition">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                        <div class="relative aspect-video bg-zinc-950 flex items-center justify-center">
+                            <div class="w-full h-full bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:4px_4px]"></div>
+                            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                                <div class="font-bold text-xl tracking-tight">DEFENDING &amp;<br>COUNTERING LEG LOCKS</div>
+                            </div>
+                            <div class="absolute bottom-3 right-3 bg-black/80 text-[10px] font-mono px-1.5 py-px rounded">9:15</div>
+                        </div>
+                        <div class="p-5">
+                            <div class="font-semibold leading-tight mb-1.5">Defending &amp; Countering Leg Locks</div>
+                            <div class="text-xs text-zinc-400 mb-3 line-clamp-2">How elite competitors shut down leg attacks and turn them into their own opportunities.</div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-semibold">$0.99</div>
+                                <button onclick="buyVideo('Defending & Countering Leg Locks', 0.99)" 
+                                        class="px-5 py-1.5 text-xs font-semibold bg-zinc-800 hover:bg-[#b91c1c] hover:text-white rounded-2xl transition">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                        <div class="relative aspect-video bg-zinc-950 flex items-center justify-center">
+                            <div class="w-full h-full bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:4px_4px]"></div>
+                            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                                <div class="font-bold text-xl tracking-tight">HEEL HOOKS &amp;<br>KNEE REAPS</div>
+                            </div>
+                            <div class="absolute bottom-3 right-3 bg-black/80 text-[10px] font-mono px-1.5 py-px rounded">13:05</div>
+                        </div>
+                        <div class="p-5">
+                            <div class="font-semibold leading-tight mb-1.5">Heel Hooks &amp; Knee Reaps – Advanced Entries</div>
+                            <div class="text-xs text-zinc-400 mb-3 line-clamp-2">Modern leg lock game. When and how to attack the heel safely and effectively.</div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-semibold">$0.99</div>
+                                <button onclick="buyVideo('Heel Hooks & Knee Reaps', 0.99)" 
+                                        class="px-5 py-1.5 text-xs font-semibold bg-zinc-800 hover:bg-[#b91c1c] hover:text-white rounded-2xl transition">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARMBARS -->
+            <div id="content-armbars" class="tab-content hidden">
+                <div class="series-header rounded-3xl p-8 mb-8">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-y-6">
+                        <div class="max-w-2xl">
+                            <h3 class="text-4xl font-bold tracking-tight">Armbars &amp; Joint Locks</h3>
+                            <p class="mt-3 text-lg text-zinc-300">From classic armbars to advanced shoulder locks and wrist locks. Every entry, every finish, every common mistake corrected.</p>
+                            <div class="mt-4 flex items-center gap-x-4 text-sm">
+                                <div><span class="font-semibold">7 videos</span> • 87 minutes total</div>
+                            </div>
+                        </div>
+                        <div>
+                            <button onclick="buyFullSeries('Armbars & Joint Locks', 9.99)" 
+                                    class="px-10 py-4 bg-white text-zinc-900 hover:bg-zinc-100 font-bold text-lg rounded-3xl flex items-center justify-center gap-x-3 transition-all active:scale-[0.985]">
+                                <span>Buy Full Series</span> <span class="font-mono text-xl">$9.99</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                    <div class="video-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                        <div class="relative aspect-video bg-zinc-950 flex items-center justify-center bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:4px_4px]">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center px-4">
+                                    <div class="font-bold text-2xl tracking-tighter">ARMBAR FROM<br>GUARD</div>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-11 h-11 bg-black/70 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition z-10">
+                                    <i class="fa-solid fa-play text-white ml-0.5"></i>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 right-3 bg-black/80 text-[10px] font-mono px-1.5 py-px rounded z-10">12:31</div>
+                        </div>
+                        <div class="p-5">
+                            <div class="font-semibold leading-tight mb-1.5">Armbar from Guard – The Highest Percentage Entry</div>
+                            <div class="text-xs text-zinc-400 mb-3">The bread-and-butter armbar every serious grappler needs. Details most people miss.</div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-semibold">$0.99</div>
+                                <button onclick="buyVideo('Armbar from Guard', 0.99)" class="px-5 py-1.5 text-xs font-semibold bg-zinc-800 hover:bg-[#b91c1c] hover:text-white rounded-2xl transition">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                        <div class="relative aspect-video bg-zinc-950 flex items-center justify-center">
+                            <div class="w-full h-full bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:4px_4px]"></div>
+                            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+                                <div class="font-bold text-xl tracking-tight">SHOULDER LOCKS<br>&amp; KIMURAS</div>
+                            </div>
+                            <div class="absolute bottom-3 right-3 bg-black/80 text-[10px] font-mono px-1.5 py-px rounded">10:55</div>
+                        </div>
+                        <div class="p-5">
+                            <div class="font-semibold leading-tight mb-1.5">Shoulder Locks &amp; Kimuras from Everywhere</div>
+                            <div class="text-xs text-zinc-400 mb-3 line-clamp-2">Versatile attacks that work in gi and no-gi. Setup from top and bottom.</div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-semibold">$0.99</div>
+                                <button onclick="buyVideo('Shoulder Locks & Kimuras', 0.99)" class="px-5 py-1.5 text-xs font-semibold bg-zinc-800 hover:bg-[#b91c1c] hover:text-white rounded-2xl transition">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-zinc-500 mt-4">+ 5 more videos in this series. Buy full series to unlock everything.</p>
+            </div>
+
+            <!-- CHOKES -->
+            <div id="content-chokes" class="tab-content hidden">
+                <div class="series-header rounded-3xl p-8 mb-8">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-y-6">
+                        <div class="max-w-2xl">
+                            <h3 class="text-4xl font-bold tracking-tight">Chokes &amp; Strangles</h3>
+                            <p class="mt-3 text-lg text-zinc-300">Rear naked chokes, guillotines, triangles, and more. Master the most reliable submissions in MMA and grappling.</p>
+                        </div>
+                        <div>
+                            <button onclick="buyFullSeries('Chokes & Strangles', 9.99)" class="px-10 py-4 bg-white text-zinc-900 hover:bg-zinc-100 font-bold text-lg rounded-3xl flex items-center justify-center gap-x-3 transition-all active:scale-[0.985]">
+                                <span>Buy Full Series</span> <span class="font-mono text-xl">$9.99</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                    <div class="video-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                        <div class="relative aspect-video bg-zinc-950 flex items-center justify-center bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:4px_4px]">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center px-4">
+                                    <div class="font-bold text-2xl tracking-tighter">CHOKE DEFENSE<br>&amp; FINISHES</div>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-11 h-11 bg-black/70 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition z-10">
+                                    <i class="fa-solid fa-play text-white ml-0.5"></i>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 right-3 bg-black/80 text-[10px] font-mono px-1.5 py-px rounded z-10">15:02</div>
+                        </div>
+                        <div class="p-5">
+                            <div class="font-semibold leading-tight mb-1.5">Choke Defense &amp; Finishes</div>
+                            <div class="text-xs text-zinc-400 mb-3">How to finish when your opponent defends the first attempt — and how to stay safe when caught.</div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-semibold">$0.99</div>
+                                <button onclick="buyVideo('Choke Defense & Finishes', 0.99)" class="px-5 py-1.5 text-xs font-semibold bg-zinc-800 hover:bg-[#b91c1c] hover:text-white rounded-2xl transition">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-zinc-500 mt-4">+ 6 more videos including Rear Naked, Guillotine variations, and Triangle mastery.</p>
+            </div>
+
+            <!-- WOMEN'S SELF-DEFENSE -->
+            <div id="content-womens" class="tab-content hidden">
+                <div class="series-header rounded-3xl p-8 mb-8">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-y-6">
+                        <div class="max-w-2xl">
+                            <div class="flex items-center gap-x-3 mb-2">
+                                <span class="px-3 py-1 text-xs font-semibold bg-emerald-900 text-emerald-400 rounded-full">HIGHLY RECOMMENDED</span>
+                            </div>
+                            <h3 class="text-4xl font-bold tracking-tight">Women's Self-Defense</h3>
+                            <p class="mt-3 text-lg text-zinc-300">Practical, scenario-based training designed specifically for women. Awareness, escapes, and techniques that work against larger attackers.</p>
+                            <div class="mt-2 text-xs text-emerald-400">Developed in partnership with Spartan Nation’s popular Women’s Self-Defense program</div>
+                        </div>
+                        <div>
+                            <button onclick="buyFullSeries('Women\'s Self-Defense', 9.99)" class="px-10 py-4 bg-white text-zinc-900 hover:bg-zinc-100 font-bold text-lg rounded-3xl flex items-center justify-center gap-x-3 transition-all active:scale-[0.985]">
+                                <span>Buy Full Series</span> <span class="font-mono text-xl">$9.99</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                    <div class="video-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                        <div class="relative aspect-video bg-zinc-950 flex items-center justify-center bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:4px_4px]">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center px-4">
+                                    <div class="font-bold text-2xl tracking-tighter">WOMEN'S<br>SELF-DEFENSE</div>
+                                    <div class="text-xs text-emerald-400 mt-1 font-medium">ESSENTIALS</div>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-11 h-11 bg-black/70 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition z-10">
+                                    <i class="fa-solid fa-play text-white ml-0.5"></i>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-3 right-3 bg-black/80 text-[10px] font-mono px-1.5 py-px rounded z-10">8:47</div>
+                        </div>
+                        <div class="p-5">
+                            <div class="font-semibold leading-tight mb-1.5">Core Self-Defense Mindset &amp; Awareness</div>
+                            <div class="text-xs text-zinc-400 mb-3">The mental game that prevents 90% of situations before they start. Real talk, no fear-mongering.</div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-semibold">$0.99</div>
+                                <button onclick="buyVideo('Core Self-Defense Mindset', 0.99)" class="px-5 py-1.5 text-xs font-semibold bg-zinc-800 hover:bg-[#b91c1c] hover:text-white rounded-2xl transition">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GROUND ESCAPES -->
+            <div id="content-ground" class="tab-content hidden">
+                <div class="series-header rounded-3xl p-8 mb-8">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-y-6">
+                        <div class="max-w-2xl">
+                            <h3 class="text-4xl font-bold tracking-tight">Ground Escapes &amp; Survival</h3>
+                            <p class="mt-3 text-lg text-zinc-300">Get off your back. Escape pins. Survive bad positions. The defensive foundation every fighter needs.</p>
+                        </div>
+                        <div>
+                            <button onclick="buyFullSeries('Ground Escapes & Survival', 9.99)" class="px-10 py-4 bg-white text-zinc-900 hover:bg-zinc-100 font-bold text-lg rounded-3xl flex items-center justify-center gap-x-3 transition-all active:scale-[0.985]">
+                                <span>Buy Full Series</span> <span class="font-mono text-xl">$9.99</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center py-8 text-zinc-400">Full grid of 7 videos coming in final version. Includes escapes from mount, side control, back takes, and more.</p>
+            </div>
+
+            <!-- TAKEDOWNS -->
+            <div id="content-takedowns" class="tab-content hidden">
+                <div class="series-header rounded-3xl p-8 mb-8">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-y-6">
+                        <div class="max-w-2xl">
+                            <h3 class="text-4xl font-bold tracking-tight">Takedowns &amp; Throws</h3>
+                            <p class="mt-3 text-lg text-zinc-300">High-percentage takedowns for MMA and grappling. Entries, finishes, and what to do when they stuff your shot.</p>
+                        </div>
+                        <div>
+                            <button onclick="buyFullSeries('Takedowns & Throws', 9.99)" class="px-10 py-4 bg-white text-zinc-900 hover:bg-zinc-100 font-bold text-lg rounded-3xl flex items-center justify-center gap-x-3 transition-all active:scale-[0.985]">
+                                <span>Buy Full Series</span> <span class="font-mono text-xl">$9.99</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center py-8 text-zinc-400">6-video series in development. Will include single legs, double legs, trips, and throw variations.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="max-w-screen-xl mx-auto px-6 py-16">
+        <div class="text-center mb-10">
+            <div class="text-xs uppercase tracking-widest font-semibold text-[#b91c1c]">REAL STUDENTS. REAL RESULTS.</div>
+            <h2 class="text-4xl font-bold tracking-tight mt-2">What fighters are saying</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-zinc-900 border border-zinc-800 p-7 rounded-3xl">
+                <div class="flex gap-x-1 text-amber-400 mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <div class="italic">"The leg lock series completely changed my guard game. I hit the exact chain from the title win video in my last tournament and got the submission in under a minute."</div>
+                <div class="mt-6 text-sm font-medium">— Marcus T., Blue Belt &amp; Competitor<br><span class="text-xs text-zinc-500">Spartan Nation member</span></div>
+            </div>
+            
+            <div class="bg-zinc-900 border border-zinc-800 p-7 rounded-3xl">
+                <div class="flex gap-x-1 text-amber-400 mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="italic">"Finally a women’s self-defense course that doesn’t feel cheesy or overly complicated. Practical, empowering, and taught by someone who clearly knows what actually works."</div>
+                <div class="mt-6 text-sm font-medium">— Sophia R.<br><span class="text-xs text-zinc-500">Online student, Phoenix</span></div>
+            </div>
+            
+            <div class="bg-zinc-900 border border-zinc-800 p-7 rounded-3xl">
+                <div class="flex gap-x-1 text-amber-400 mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="italic">"I’ve watched hundreds of free YouTube videos. These are different. Clear, concise, and directly applicable. Worth every penny. Already bought two more series."</div>
+                <div class="mt-6 text-sm font-medium">— Derek K., Purple Belt<br><span class="text-xs text-zinc-500">Competition team member</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div id="faq" class="max-w-screen-xl mx-auto px-6 pb-16">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold tracking-tight">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="space-y-3">
+                <details class="bg-zinc-900 border border-zinc-800 rounded-2xl px-6 py-1 group">
+                    <summary class="font-medium py-4 cursor-pointer flex justify-between items-center">How do I access the videos after purchase?</summary>
+                    <div class="pb-5 text-sm text-zinc-400">Instant access via email with a private link to our secure video player (Vimeo). Stream or download for offline viewing. Lifetime access — no expiration.</div>
+                </details>
+                <details class="bg-zinc-900 border border-zinc-800 rounded-2xl px-6 py-1 group">
+                    <summary class="font-medium py-4 cursor-pointer flex justify-between items-center">Can I buy individual videos or do I have to get the full series?</summary>
+                    <div class="pb-5 text-sm text-zinc-400">Both options are available. Individual videos are $0.99 each. Full series are $9.99 (big discount). Most people buy the full series for the best value.</div>
+                </details>
+                <details class="bg-zinc-900 border border-zinc-800 rounded-2xl px-6 py-1 group">
+                    <summary class="font-medium py-4 cursor-pointer flex justify-between items-center">Is this content suitable for beginners?</summary>
+                    <div class="pb-5 text-sm text-zinc-400">Yes. Every series starts with fundamentals and progresses logically. Many beginners find the structured approach easier than piecing together free content.</div>
+                </details>
+                <details class="bg-zinc-900 border border-zinc-800 rounded-2xl px-6 py-1 group">
+                    <summary class="font-medium py-4 cursor-pointer flex justify-between items-center">Will there be more series added in the future?</summary>
+                    <div class="pb-5 text-sm text-zinc-400">Yes. We’re already filming Guard Play, Advanced Competition Strategies, and MMA-specific clinch work. Buyers of existing series will get early access and discounts on new releases.</div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="bg-zinc-900 border-t border-zinc-800 py-14">
+        <div class="max-w-screen-xl mx-auto px-6 text-center">
+            <div class="max-w-md mx-auto">
+                <h3 class="text-3xl font-bold tracking-tight mb-3">Ready to level up your game?</h3>
+                <p class="text-zinc-400 mb-6">Start with one video for 99¢ or grab a full series for $9.99. No risk. Instant access.</p>
+                
+                <button onclick="document.getElementById('series').scrollIntoView({ behavior: 'smooth' })" 
+                        class="px-10 py-4 bg-[#b91c1c] hover:bg-red-700 text-white font-semibold text-lg rounded-3xl inline-flex items-center gap-x-3 transition-all active:scale-[0.985]">
+                    <span>Browse All Series Now</span>
+                </button>
+                
+                <div class="mt-4 text-xs text-zinc-500">Questions? Email us at instruction@spartannationcombatives.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-800 py-8 text-xs text-zinc-500">
+        <div class="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-y-4">
+            <div>© 2026 Spartan Nation Combatives. All rights reserved. Affiliated with spartannationcombatives.com</div>
+            <div class="flex gap-x-5">
+                <a href="#" class="hover:text-zinc-300">Privacy</a>
+                <a href="#" class="hover:text-zinc-300">Terms</a>
+                <a href="#" class="hover:text-zinc-300">Refund Policy</a>
+                <a href="https://spartannationcombatives.com/" class="hover:text-zinc-300">Visit Gym Site</a>
+            </div>
+        </div>
+        <div class="max-w-screen-xl mx-auto px-6 mt-4 text-[10px] text-center md:text-left text-zinc-600">
+            This is a visual design mockup only. No real transactions or video content is delivered from this page. For internal team review.
+        </div>
+    </footer>
+
+    <!-- Purchase Modal -->
+    <div id="purchase-modal" onclick="if (event.target.id === 'purchase-modal') hideModal()" class="hidden fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-zinc-900 border border-zinc-700 w-full max-w-md rounded-3xl overflow-hidden">
+            <div class="p-8">
+                <div id="modal-content">
+                    <!-- Dynamic content injected by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent-red', '#b91c1c');
+        }
+
+        // Tab switching
+        let currentTab = 'leglocks';
+
+        function switchTab(tab) {
+            // Hide all content
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            
+            // Show selected
+            const content = document.getElementById('content-' + tab);
+            if (content) content.classList.remove('hidden');
+            
+            // Update active tab styles
+            document.querySelectorAll('#tab-nav button').forEach(btn => {
+                btn.classList.remove('active', 'text-white', 'border-b-2', 'border-[#b91c1c]');
+                btn.classList.add('text-zinc-400');
+                
+                if (btn.getAttribute('data-tab') === tab) {
+                    btn.classList.add('active', 'text-white', 'border-b-2', 'border-[#b91c1c]');
+                    btn.classList.remove('text-zinc-400');
+                }
+            });
+            
+            currentTab = tab;
+        }
+
+        // Buy individual video
+        function buyVideo(title, price) {
+            const modal = document.getElementById('purchase-modal');
+            const content = document.getElementById('modal-content');
+            
+            content.innerHTML = `
+                <div class="text-center">
+                    <div class="mx-auto w-16 h-16 bg-zinc-800 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-video text-3xl text-[#b91c1c]"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold tracking-tight mb-1">${title}</h3>
+                    <div class="text-4xl font-mono font-semibold mb-6">$${price}</div>
+                    
+                    <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-4 text-left text-sm mb-6">
+                        <div class="flex justify-between py-1 border-b border-zinc-800">
+                            <span class="text-zinc-400">Video</span>
+                            <span class="font-medium">${title}</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-zinc-800">
+                            <span class="text-zinc-400">Access</span>
+                            <span class="font-medium">Lifetime</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-zinc-400">Delivery</span>
+                            <span class="font-medium text-emerald-400">Instant via email</span>
+                        </div>
+                    </div>
+                    
+                    <button onclick="simulatePurchase('${title}', ${price}, false)" 
+                            class="w-full py-4 bg-[#b91c1c] hover:bg-red-700 font-bold rounded-2xl mb-3 transition">
+                        Complete Purchase • $${price}
+                    </button>
+                    
+                    <button onclick="hideModal()" class="text-xs text-zinc-400 hover:text-zinc-300">Cancel</button>
+                    
+                    <div class="mt-6 text-[10px] text-center text-zinc-500">
+                        This is a simulation. In the live site this would process via Stripe/Gumroad and deliver instant access.
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        // Buy full series
+        function buyFullSeries(seriesName, price) {
+            const modal = document.getElementById('purchase-modal');
+            const content = document.getElementById('modal-content');
+            
+            content.innerHTML = `
+                <div class="text-center">
+                    <div class="mx-auto w-16 h-16 bg-zinc-800 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-layer-group text-3xl text-[#b91c1c]"></i>
+                    </div>
+                    
+                    <div class="uppercase tracking-widest text-xs font-semibold text-emerald-400 mb-1">BEST VALUE</div>
+                    <h3 class="text-2xl font-bold tracking-tight mb-1">${seriesName} Series</h3>
+                    <div class="text-4xl font-mono font-semibold mb-2">$${price}</div>
+                    <div class="text-emerald-400 text-sm mb-6">Lifetime access to all videos in this series</div>
+                    
+                    <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-4 text-left text-sm mb-6">
+                        <div class="text-emerald-400 text-xs font-semibold mb-2">WHAT YOU GET</div>
+                        <ul class="space-y-1.5 text-xs">
+                            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-400 mt-0.5"></i> All videos in the ${seriesName} series</li>
+                            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-400 mt-0.5"></i> Future updates to this series</li>
+                            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-400 mt-0.5"></i> Stream or download for offline</li>
+                            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-400 mt-0.5"></i> Priority access to new series</li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="simulatePurchase('${seriesName} Series', ${price}, true)" 
+                            class="w-full py-4 bg-[#b91c1c] hover:bg-red-700 font-bold rounded-2xl mb-3 transition">
+                        Buy Full Series • $${price}
+                    </button>
+                    
+                    <button onclick="hideModal()" class="text-xs text-zinc-400 hover:text-zinc-300">Maybe later</button>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function simulatePurchase(item, price, isSeries) {
+            const content = document.getElementById('modal-content');
+            
+            content.innerHTML = `
+                <div class="text-center py-4">
+                    <div class="mx-auto w-16 h-16 bg-emerald-900/30 text-emerald-400 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-check text-4xl"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-2">Purchase Successful!</h3>
+                    <p class="text-zinc-400 mb-6">Thank you. In the real version you would receive an email with instant access links right now.</p>
+                    
+                    <div class="bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-xs text-left mb-6">
+                        <div class="font-mono text-emerald-400">CONFIRMATION #SPN-${Date.now().toString().slice(-8)}</div>
+                        <div class="mt-3 text-zinc-400">${item} — $${price}</div>
+                        <div class="text-emerald-400 mt-1">Access granted immediately (simulated)</div>
+                    </div>
+                    
+                    <button onclick="hideModal()" 
+                            class="px-8 py-3 bg-white text-zinc-900 font-semibold rounded-2xl text-sm">
+                        Close
+                    </button>
+                </div>
+            `;
+        }
+
+        function hideModal() {
+            const modal = document.getElementById('purchase-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function showPreviewModal() {
+            const modal = document.getElementById('purchase-modal');
+            const content = document.getElementById('modal-content');
+            
+            content.innerHTML = `
+                <div>
+                    <div class="flex justify-between items-start mb-5">
+                        <div>
+                            <div class="text-xs uppercase tracking-widest text-[#b91c1c] font-semibold">FREE TEASER</div>
+                            <div class="text-2xl font-bold tracking-tight">Coach Huber Intro + Sample Technique</div>
+                        </div>
+                        <button onclick="hideModal()" class="text-xl text-zinc-400 hover:text-white">×</button>
+                    </div>
+                    
+                    <div class="aspect-video bg-zinc-950 rounded-2xl mb-5 flex items-center justify-center border border-zinc-800">
+                        <div class="text-center">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-black/70 rounded-full mb-4">
+                                <i class="fa-solid fa-play text-white text-3xl ml-1"></i>
+                            </div>
+                            <div class="font-medium">2:14 — Free Preview</div>
+                            <div class="text-xs text-zinc-400 mt-1">In real version this would be an embedded video</div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-sm text-zinc-300">
+                        Get a feel for the teaching style and production quality. Then decide if the full series is right for you.
+                    </div>
+                    
+                    <button onclick="hideModal(); document.getElementById('series').scrollIntoView({behavior:'smooth'})" 
+                            class="mt-6 w-full py-3.5 bg-white text-zinc-900 font-semibold rounded-2xl text-sm">
+                        Browse Full Series Instead
+                    </button>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        // Keyboard escape for modal
+        function setupKeyboard() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === "Escape") {
+                    const modal = document.getElementById('purchase-modal');
+                    if (!modal.classList.contains('hidden')) {
+                        hideModal();
+                    }
+                }
+            });
+        }
+
+        // Initialize everything
+        function init() {
+            initializeTailwind();
+            setupKeyboard();
+            
+            // Show first tab by default
+            document.getElementById('content-leglocks').classList.remove('hidden');
+            
+            // Make sure first tab button has active styles
+            const firstTab = document.querySelector('#tab-nav button[data-tab="leglocks"]');
+            if (firstTab) {
+                firstTab.classList.add('active', 'text-white', 'border-b-2', 'border-[#b91c1c]');
+            }
+            
+            // Optional: Preload a couple images if needed (already handled)
+            console.log('%c[Spartan Nation Mockup] Website mockup initialized successfully.', 'color:#666');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
